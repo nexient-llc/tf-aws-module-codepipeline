@@ -24,3 +24,8 @@ output "source_s3_bucket_arn" {
   description = "The codepipeline source s3 bucket ARN"
   value       = aws_s3_bucket.source[0].arn
 }
+
+output "pipelineType" {
+  description = "The codepipeline pipelineType"
+  value       = var.pipelineType
+}

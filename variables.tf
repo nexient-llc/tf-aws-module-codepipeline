@@ -66,6 +66,12 @@ variable "codepipeline_iam" {
   default     = null
 }
 
+variable "pipelineType" {
+  description = "The CodePipeline pipelineType. Valid options are V1, V2"
+  type        = string
+  default     = "V1"
+}
+
 variable "tags" {
   description = "An arbitrary map of tags that can be added to all resources."
   type        = map(string)
