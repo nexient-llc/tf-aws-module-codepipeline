@@ -135,7 +135,7 @@ Currently, the `encrypt at transit` is not supported in terraform. There is an o
 | Name | Version |
 |------|---------|
 | <a name="provider_random"></a> [random](#provider\_random) | 3.5.1 |
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.5.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.23.1 |
 
 ## Modules
 
@@ -179,6 +179,7 @@ No modules.
 | <a name="input_log_target_bucket"></a> [log\_target\_bucket](#input\_log\_target\_bucket) | Target bucket for S3 Access Logs. If left blank, access logging is disabled. | `string` | `""` | no |
 | <a name="input_log_target_prefix"></a> [log\_target\_prefix](#input\_log\_target\_prefix) | Prefix for S3 Access logs. Defaults to AWSLogs/<AWS Account ID>/s3audit if not otherwise provided. | `string` | `""` | no |
 | <a name="input_codepipeline_iam"></a> [codepipeline\_iam](#input\_codepipeline\_iam) | Additional IAM actions to add to CodePipeline IAM role. | `map(list(string))` | `null` | no |
+| <a name="input_pipelineType"></a> [pipelineType](#input\_pipelineType) | The CodePipeline pipelineType. Valid options are V1, V2 | `string` | `"V1"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | An arbitrary map of tags that can be added to all resources. | `map(string)` | `{}` | no |
 
 ## Outputs
@@ -188,4 +189,5 @@ No modules.
 | <a name="output_id"></a> [id](#output\_id) | The codepipeline ID |
 | <a name="output_arn"></a> [arn](#output\_arn) | The codepipeline ARN |
 | <a name="output_source_s3_bucket_arn"></a> [source\_s3\_bucket\_arn](#output\_source\_s3\_bucket\_arn) | The codepipeline source s3 bucket ARN |
+| <a name="output_pipelineType"></a> [pipelineType](#output\_pipelineType) | The codepipeline pipelineType |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
