@@ -32,6 +32,12 @@ variable "stages" {
   type        = any
 }
 
+variable "pipeline_type" {
+  description = "The CodePipeline pipeline_type. Valid options are V1, V2"
+  type        = string
+  default     = "V2"
+}
+
 variable "tags" {
   description = "An arbitrary map of tags that can be added to all resources."
   type        = map(string)

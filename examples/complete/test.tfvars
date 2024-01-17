@@ -1,6 +1,7 @@
 name             = "my-pipeline"
 create_s3_source = true
 source_s3_bucket = "test-bucket01-1234567890"
+pipeline_type = "V2"
 
 stages = [
   {
