@@ -66,8 +66,8 @@ variable "codepipeline_iam" {
   default     = null
 }
 
-variable "pipelineType" {
-  description = "The CodePipeline pipelineType. Valid options are V1, V2"
+variable "pipeline_type" {
+  description = "The CodePipeline pipeline_type. Valid options are V1, V2"
   type        = string
   default     = "V1"
 }
