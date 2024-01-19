@@ -18,6 +18,7 @@ module "codepipeline" {
   create_s3_source = var.create_s3_source
   source_s3_bucket = var.source_s3_bucket
   stages           = var.stages
+  pipeline_type    = var.pipeline_type
 
   tags = var.tags
 }

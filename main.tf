@@ -14,8 +14,9 @@ data "aws_caller_identity" "current" {}
 
 ### Resources to create CodePipeline
 resource "aws_codepipeline" "this" {
-  name     = var.name
-  role_arn = aws_iam_role.codepipeline_role.arn
+  name          = var.name
+  role_arn      = aws_iam_role.codepipeline_role.arn
+  pipeline_type = var.pipeline_type
 
   dynamic "artifact_store" {
     for_each = [for store in var.artifact_stores : {
