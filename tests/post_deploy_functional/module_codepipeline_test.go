@@ -3,10 +3,10 @@ package tests
 import (
 	"context"
 	"encoding/json"
-	"github.com/gruntwork-io/terratest/modules/logger"
-	"io/ioutil"
 	"os"
 	"testing"
+
+	"github.com/gruntwork-io/terratest/modules/logger"
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/config"
@@ -122,7 +122,7 @@ func setupAndTestPipeline(t *testing.T, dir string) {
 
 	// Read the JSON file into your variable
 	var vars TestTfvars
-	bytes, err := ioutil.ReadFile(jsonOutPath)
+	bytes, err := os.ReadFile(jsonOutPath)
 	assert.NoError(t, err)
 	err = json.Unmarshal(bytes, &vars)
 	assert.NoError(t, err)
