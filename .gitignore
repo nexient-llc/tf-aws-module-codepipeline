@@ -63,3 +63,6 @@ azure_env.sh
 
 # terratest internals
 **/.test-data/
+
+# Testing outputs
+examples/**/output.json
