@@ -129,6 +129,7 @@ Currently, the `encrypt at transit` is not supported in terraform. There is an o
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.0, <= 1.5.5 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.32.0 |
+| <a name="requirement_random"></a> [random](#requirement\_random) | >= 3.6.0 |
 
 ## Providers
 

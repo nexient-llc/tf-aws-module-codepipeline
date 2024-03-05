@@ -275,7 +275,7 @@ resource "aws_iam_role" "pipeline_event_role" {
 data "aws_iam_policy_document" "pipeline_event_role_policy" {
   statement {
     actions   = ["codepipeline:StartPipelineExecution"]
-    resources = ["${aws_codepipeline.this.arn}"]
+    resources = [aws_codepipeline.this.arn]
     effect    = "Allow"
   }
 }

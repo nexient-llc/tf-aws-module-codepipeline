@@ -16,7 +16,11 @@ provider "random" {}
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.0, <= 1.5.5 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.32.0 |
+| <a name="requirement_random"></a> [random](#requirement\_random) | >= 3.6.0 |
 
 ## Providers
 
@@ -40,6 +44,7 @@ No resources.
 | <a name="input_create_s3_source"></a> [create\_s3\_source](#input\_create\_s3\_source) | Create S3 source bucket for CodePipeline. | `string` | `false` | no |
 | <a name="input_source_s3_bucket"></a> [source\_s3\_bucket](#input\_source\_s3\_bucket) | Name of the S3 source bucket. | `string` | `null` | no |
 | <a name="input_stages"></a> [stages](#input\_stages) | One or more stage blocks. | `any` | n/a | yes |
+| <a name="input_pipeline_type"></a> [pipeline\_type](#input\_pipeline\_type) | The CodePipeline pipeline\_type. Valid options are V1, V2 | `string` | `"V2"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | An arbitrary map of tags that can be added to all resources. | `map(string)` | `{}` | no |
 
 ## Outputs
