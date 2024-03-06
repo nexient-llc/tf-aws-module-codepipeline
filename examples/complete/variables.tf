@@ -21,8 +21,8 @@ variable "create_s3_source" {
   default     = false
 }
 
-variable "source_s3_bucket" {
-  description = "Name of the S3 source bucket."
+variable "source_s3_bucket_prefix" {
+  description = "Prefix of the S3 source bucket. Random characters will be added to the end to ensure uniqueness."
   type        = string
   default     = null
 }

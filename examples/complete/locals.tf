@@ -10,21 +10,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-resource "random_string" "random" {
-  length  = 16
-  special = false
-  upper   = false
-}
-
-module "codepipeline" {
-  source = "../.."
-
-  name = var.name
-
-  create_s3_source = var.create_s3_source
-  source_s3_bucket = local.source_bucket_name
-  stages           = var.stages
-  pipeline_type    = var.pipeline_type
-
-  tags = var.tags
+locals {
+  source_bucket_name = "${var.source_s3_bucket_prefix}-${random_string.random.result}"
 }
