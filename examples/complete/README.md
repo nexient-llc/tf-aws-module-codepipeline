@@ -49,6 +49,7 @@ provider "random" {}
 | <a name="input_source_s3_bucket_prefix"></a> [source\_s3\_bucket\_prefix](#input\_source\_s3\_bucket\_prefix) | Prefix of the S3 source bucket. Random characters will be added to the end to ensure uniqueness. | `string` | `null` | no |
 | <a name="input_stages"></a> [stages](#input\_stages) | One or more stage blocks. | `any` | n/a | yes |
 | <a name="input_pipeline_type"></a> [pipeline\_type](#input\_pipeline\_type) | The CodePipeline pipeline\_type. Valid options are V1, V2 | `string` | `"V2"` | no |
+| <a name="input_execution_mode"></a> [execution\_mode](#input\_execution\_mode) | The CodePipeline execution\_mode. Valid options are `PARALLEL`, `QUEUED`, `SUPERSEDED` (default) | `string` | `"SUPERSEDED"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | An arbitrary map of tags that can be added to all resources. | `map(string)` | `{}` | no |
 
 ## Outputs

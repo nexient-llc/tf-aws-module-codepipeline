@@ -25,6 +25,7 @@ module "codepipeline" {
   source_s3_bucket = local.source_bucket_name
   stages           = var.stages
   pipeline_type    = var.pipeline_type
+  execution_mode   = var.execution_mode
 
   tags = var.tags
 }

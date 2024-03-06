@@ -38,6 +38,17 @@ variable "pipeline_type" {
   default     = "V2"
 }
 
+variable "execution_mode" {
+  description = "The CodePipeline execution_mode. Valid options are `PARALLEL`, `QUEUED`, `SUPERSEDED` (default)"
+  type        = string
+  default     = "SUPERSEDED"
+
+  validation {
+    condition     = contains(["PARALLEL", "QUEUED", "SUPERSEDED"], var.execution_mode)
+    error_message = "Must be either `PARALLEL`, `QUEUED`, or `SUPERSEDED`."
+  }
+}
+
 variable "tags" {
   description = "An arbitrary map of tags that can be added to all resources."
   type        = map(string)
