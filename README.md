@@ -129,13 +129,14 @@ Currently, the `encrypt at transit` is not supported in terraform. There is an o
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.0, <= 1.5.5 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.32.0 |
+| <a name="requirement_random"></a> [random](#requirement\_random) | >= 3.6.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_random"></a> [random](#provider\_random) | 3.6.0 |
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.32.1 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.39.1 |
 
 ## Modules
 
@@ -180,6 +181,7 @@ No modules.
 | <a name="input_log_target_prefix"></a> [log\_target\_prefix](#input\_log\_target\_prefix) | Prefix for S3 Access logs. Defaults to AWSLogs/<AWS Account ID>/s3audit if not otherwise provided. | `string` | `""` | no |
 | <a name="input_codepipeline_iam"></a> [codepipeline\_iam](#input\_codepipeline\_iam) | Additional IAM actions to add to CodePipeline IAM role. | `map(list(string))` | `null` | no |
 | <a name="input_pipeline_type"></a> [pipeline\_type](#input\_pipeline\_type) | The CodePipeline pipeline\_type. Valid options are V1, V2 | `string` | `"V1"` | no |
+| <a name="input_execution_mode"></a> [execution\_mode](#input\_execution\_mode) | The CodePipeline execution\_mode. Valid options are `PARALLEL`, `QUEUED`, `SUPERSEDED` (default) | `string` | `"SUPERSEDED"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | An arbitrary map of tags that can be added to all resources. | `map(string)` | `{}` | no |
 
 ## Outputs

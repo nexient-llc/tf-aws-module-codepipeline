@@ -1,7 +1,8 @@
-name             = "my-pipeline"
-create_s3_source = true
-source_s3_bucket = "test-bucket01-1234567890"
-pipeline_type = "V2"
+name                    = "tf-aws-module-codepipeline-test-pipeline"
+create_s3_source        = true
+source_s3_bucket_prefix = "tf-aws-module-codepipeline-test-bucket"
+pipeline_type           = "V2"
+execution_mode          = "PARALLEL"
 
 stages = [
   {

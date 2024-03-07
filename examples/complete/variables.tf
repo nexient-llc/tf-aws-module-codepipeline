@@ -21,8 +21,8 @@ variable "create_s3_source" {
   default     = false
 }
 
-variable "source_s3_bucket" {
-  description = "Name of the S3 source bucket."
+variable "source_s3_bucket_prefix" {
+  description = "Prefix of the S3 source bucket. Random characters will be added to the end to ensure uniqueness."
   type        = string
   default     = null
 }
@@ -36,6 +36,17 @@ variable "pipeline_type" {
   description = "The CodePipeline pipeline_type. Valid options are V1, V2"
   type        = string
   default     = "V2"
+}
+
+variable "execution_mode" {
+  description = "The CodePipeline execution_mode. Valid options are `PARALLEL`, `QUEUED`, `SUPERSEDED` (default)"
+  type        = string
+  default     = "SUPERSEDED"
+
+  validation {
+    condition     = contains(["PARALLEL", "QUEUED", "SUPERSEDED"], var.execution_mode)
+    error_message = "Must be either `PARALLEL`, `QUEUED`, or `SUPERSEDED`."
+  }
 }
 
 variable "tags" {
